@@ -1,0 +1,31 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Home</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card>
+		<ion-card-content>
+			<h2>Welcome to Pictura!</h2>
+			<p>An Image Capture Example</p>
+			<img [src]="base64Image" *ngIf="base64Image" />
+			<button ion-button block *ngIf="base64Image" (click)="savePhoto()">Save</button>
+		</ion-card-content>
+	</ion-card>
+
+
+	<div *ngIf="cloudinaryImageUri">
+		<h2>Cloudinary results</h2>
+		<h2>Thumb</h2>
+		<img [src]="cloudinaryThumbUri" *ngIf="cloudinaryThumbUri" />
+		<h2>Full</h2>
+		<img [src]="cloudinaryImageUri" *ngIf="cloudinaryImageUri" />
+	</div>
+
+
+	<ion-fab top right edge>
+		<button ion-fab mini (click)="takePhoto()"><ion-icon name="camera"></ion-icon></button>
+
+	</ion-fab>
+</ion-content>
