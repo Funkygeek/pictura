@@ -35,6 +35,10 @@
     "typescript": "^2.0.3"
   },
   "cordovaPlugins": [
+    "cordova-plugin-camera",
+    "cordova-plugin-compat",
+    "cordova-plugin-file",
+    "cordova-plugin-file-transfer",
     "cordova-plugin-device",
     "cordova-plugin-console",
     "cordova-plugin-whitelist",
